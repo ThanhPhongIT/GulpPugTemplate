@@ -1,7 +1,7 @@
 /**
    * @param $direction: horizontal vertical both
    example : @include center(both) || @include center(horizontal) || @include center(vertical)
-   */
+*/
 @mixin center($direction: both) {
   position: absolute;
   @if $direction==both {

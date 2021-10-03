@@ -5,26 +5,22 @@
 
   @if $line-height==normal {
     line-height: normal;
-  }
-
-  @else {
+  } @else {
     line-height: $line-height / $font-size;
   }
 
   @if $letter-spacing==normal {
     letter-spacing: normal;
-  }
-
-  @else {
+  } @else {
     letter-spacing: #{$letter-spacing / $font-size}em;
   }
 }
 
 /* ===== Usage ===== */
-p {
-  @include font-size(12, 18, 1.2);
-  // returns
-  font-size: 12px;
-  line-height: 1.5; // 18 / 12
-  letter-spacing: 0.1em;
-}
+// p {
+//   @include font-size(12, 18, 1.2);
+// returns
+//   font-size: 12px;
+//   line-height: 1.5; // 18 / 12
+//   letter-spacing: 0.1em;
+// }

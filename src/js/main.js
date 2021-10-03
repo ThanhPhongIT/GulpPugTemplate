@@ -9,19 +9,19 @@ window.onload = () => {
       );
       const tabPanel = document.querySelectorAll(".tabs__item");
 
-      tabBtn.forEach(item =>
-        item.addEventListener("click", e => {
+      tabBtn.forEach((item) =>
+        item.addEventListener("click", (e) => {
           //add class activeTab by element's click and remove class activeTab other
           const self = e.target;
 
-          tabBtn.forEach(btn => btn.classList.remove("activeTab"));
+          tabBtn.forEach((btn) => btn.classList.remove("activeTab"));
           self.classList.add("activeTab");
           const panel = document.getElementById(self.dataset.text);
-          tabPanel.forEach(tab => tab.classList.remove("activeTab"));
+          tabPanel.forEach((tab) => tab.classList.remove("activeTab"));
           panel.classList.add("activeTab");
         })
       );
-    }
+    },
   };
   tab.init();
   const accodions = {
@@ -41,8 +41,7 @@ window.onload = () => {
     },
     subAccodion1: function (wrap, button, item, arrow) {
       const self = document.querySelectorAll(wrap);
-
-      self.forEach(i => {
+      self.forEach((i) => {
         const buttons = i.querySelectorAll(button);
         const items = i.querySelectorAll(item);
         const arrows = i.querySelector(arrow);
@@ -54,7 +53,7 @@ window.onload = () => {
           })
         );
       });
-    }
+    },
   };
   accodions.init();
 };

@@ -1,7 +1,12 @@
-.menu-left{
-	display: flex;
-	list-style: none;
-	li{
-		padding-right: 15px;
-	}
+body {
+  font-family: $font-family-monospace;
+  @include clearfix;
+}
+
+.menu-left {
+  @include flex-center;
+  list-style: none;
+  li {
+    padding-right: 15px;
+  }
 }
